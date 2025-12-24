@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Irfan | Cyber Card v2.0</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="cyber-bg"></canvas>
+
+    <div class="diagram-wrapper">
+        <div class="connector-vertical"></div>
+
+        <!-- IDENTITY -->
+        <div class="section-container relative mb-12 md:mb-16 flex items-center">
+            <span class="label md:left-[60px]" style="top: -25px; left: 30px;">>&nbsp;SYS.ADMIN_ID</span>
+            <div class="node-box ml-[30px] md:ml-[60px]" onclick="toggleProfile()">
+                <h1 class="text-xl md:text-3xl font-bold tracking-tighter cyber-glitch" style="color: var(--cyber-blue)">AHMED IRFAN</h1>
+                <p class="text-[9px] text-white/50 mt-1 uppercase tracking-[0.5em]">CS_STUDENT // NEURAL_NET_RESEARCH</p>
+                <div id="profile-content" class="text-blue-100/80">
+                    <p class="mb-3">Hi! I’m Ahmed, a CS student and tech enthusiast passionate about programming, robotics, and innovative digital solutions.</p>
+                    <p class="mb-3">This portfolio is a cyberpunk-style interactive digital business card featuring neon animations, glitch effects, and responsive design.</p>
+                    <p class="text-blue-400 font-bold italic">"Reflecting creativity and passion for futuristic tech. More projects coming soon!"</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- LINKEDIN -->
+        <div class="section-container relative mb-10 md:mb-16 flex items-center">
+            <div class="connector-horizontal" style="top: 50%; width: 40px;"></div>
+            <span class="label md:left-[100px]" style="top: -20px; left: 70px;">>&nbsp;PROFESSIONAL_LINK</span>
+            <div onclick="handleLinkedInClick(event)" class="node-box ml-[40px] md:ml-[100px]">
+                <span class="text-xs md:text-sm font-bold">LINKEDIN // PROFILE</span>
+                <div class="text-[7px] text-blue-300/40 mt-1">STATUS: SOURCE_VERIFIED</div>
+            </div>
+        </div>
+
+        <!-- GITHUB 01 -->
+        <div class="section-container relative mb-10 md:mb-16 flex items-center">
+            <div class="connector-horizontal" style="top: 50%; width: 60px;"></div>
+            <span class="label md:left-[120px]" style="top: -20px; left: 90px;">>&nbsp;REPO_01</span>
+            <a href="https://github.com/xCYBERx01" target="_blank" rel="noopener noreferrer" class="node-box ml-[60px] md:ml-[120px]">
+                <span class="text-xs md:text-sm font-bold">@xCYBERx01</span>
+                <div class="text-[7px] text-blue-300/40 mt-1">PROTOCOL: SECURE_CORE</div>
+            </a>
+        </div>
+
+        <!-- GITHUB 02 -->
+        <div class="section-container relative mb-10 md:mb-16 flex items-center">
+            <div class="connector-horizontal" style="top: 50%; width: 80px;"></div>
+            <span class="label md:left-[140px]" style="top: -20px; left: 110px;">>&nbsp;REPO_02</span>
+            <a href="https://github.com/ahmedirfanak" target="_blank" rel="noopener noreferrer" class="node-box ml-[80px] md:ml-[140px]">
+                <span class="text-xs md:text-sm font-bold">@ahmedirfanak</span>
+                <div class="text-[7px] text-blue-300/40 mt-1">PROTOCOL: DEV_INSTANCE</div>
+            </a>
+        </div>
+
+        <!-- INSTAGRAM -->
+        <div class="section-container relative mb-10 md:mb-16 flex items-center">
+            <div class="connector-horizontal" style="top: 50%; width: 50px;"></div>
+            <span class="label md:left-[110px]" style="top: -20px; left: 80px;">>&nbsp;VISUAL_FEED</span>
+            <a href="https://instagram.com/ahmedirfanak" target="_blank" rel="noopener noreferrer" class="node-box ml-[50px] md:ml-[110px]">
+                <span class="text-xs md:text-sm font-bold">@ahmedirfanak</span>
+            </a>
+        </div>
+
+        <!-- CONTACT (UPDATED SIGNAL) -->
+        <div class="section-container relative mb-8 flex items-center">
+            <div class="connector-horizontal" style="top: 50%; width: 30px;"></div>
+            <span class="label md:left-[90px]" style="top: -20px; left: 60px;">>&nbsp;COMMS_UPLINK</span>
+            <div onclick="handleMailClick(event)" class="node-box ml-[30px] md:ml-[90px]">
+                <span class="text-[10px] md:text-sm text-blue-200">ahmedirfanak01@gmail.com</span>
+                <div class="mt-2 flex items-center gap-2">
+                    <span class="w-2 h-2 bg-green-500 rounded-sm animate-pulse shadow-[0_0_10px_#22c55e]"></span>
+                    <span class="text-[8px] text-green-400 uppercase font-bold">Signal: AVAILABLE FOR PROJECTS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- HUD FOOTER -->
+        <div class="mt-16 flex justify-between items-end border-t border-white/10 pt-4">
+            <div class="text-[8px] text-white/30 space-y-1">
+                <p>LOC: 12.87°N, 74.84°E</p>
+                <p>OS: CYBER_OS v2.0.4</p>
+            </div>
+            <div class="text-right text-[8px] text-blue-500/50 space-y-1">
+                <p>ENCRYPTION: AES-256</p>
+                <p class="font-bold text-blue-400">STATUS: AUTHORIZED</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="toast">ACTION_EXECUTED</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
